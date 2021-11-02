@@ -1,19 +1,23 @@
 import React from 'react'
 import Logo from '../../images/logo.svg'
 import Hamburger from '../../images/icon-hamburger.svg'
+import { ContainHeader,CloseHamburger,ItemHeader,GetStarted } from '../styles/styleHeader'
 import Close from '../../images/icon-close.svg'
 const Header = ({close,setClose}) => {
     const item = ['Pricing','Product','About Us','Careers', 'Community']
     return (
-        <header>
+        <ContainHeader>
             <img src={Logo} alt="" />
-            <div>
+            <ItemHeader close={close}>
                 {item.map((it,i) => <p key={i}>{it}</p>)}
-            </div>
-            <button onClick={() => setClose(!close)}>
+            </ItemHeader>
+            <CloseHamburger onClick={() => setClose(!close)}>
                 <img src={close ? Close : Hamburger} alt="hamburger/close" />
-            </button>
-        </header>
+            </CloseHamburger>
+            <GetStarted>
+                Get Started
+            </GetStarted>
+        </ContainHeader>
     )
 }
 
