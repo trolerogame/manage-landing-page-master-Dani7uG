@@ -89,16 +89,21 @@ export const Manage = styled.div`
     }
     p{
         color:hsl(227, 12%, 61%);
+        pointer-events: none;
     }
     @media (min-width:768px){
         b{
             background-color:none;
             text-align: start;
-            padding:10px 0px 10px 100px;
+            padding:10px 0px 10px 0px;
+            margin-left: 100px;
+            border-radius:0;
+            background:none;
         }
         p{
             padding-left: 100px;
             width:400px;
+            
         }
     }
 `
@@ -108,28 +113,47 @@ export const ContainComments = styled.div`
     flex-direction: column;
     align-items: center;
     margin:40px 10px;
+
 `
 
 export const ContainPoints = styled.div`
-    margin:50px 0;
+    margin:100px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .alice-carousel__dots-item{
+        display:inline-block;
+        margin:0 2.5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border:1px solid hsl(12, 88%, 59%);
+        cursor:pointer;
+        transition: all .1s linear;
+        background: none;
+    }
+    .alice-carousel__dots-item.__active{
+        background: hsl(12, 88%, 59%);
+    }
+    .alice-carousel__dots-item:hover{
+        background: hsl(12, 88%, 59%);
+    }
     @media (min-width:768px){
-        display:none;
+        .alice-carousel__dots{
+            display:none;
+        }
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
 `
 
 export const Point = styled.div`
-    display:inline-block;
-    margin:0 2.5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border:1px solid hsl(12, 88%, 59%);
-    cursor:pointer;
-    transition: all .1s linear;
-    background:${props => props.focus  ? 'hsl(12, 88%, 59%)' : 'none'};
+
 `
 
 export const Carousel = styled.div`
+    position: relative;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -146,6 +170,7 @@ export const Carousel = styled.div`
         margin:10px 0;
     }
     p{
+        pointer-events: none;
         color:hsl(227, 12%, 61%);
         text-align:center;
         margin:15px;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useRef} from 'react'
 import { ContainFooter,Form,ImgsIconsContain,Items } from '../styles/styleFooter'
 import facebook from '../../images/icon-facebook.svg'
 import youtube from '../../images/icon-youtube.svg'
@@ -7,13 +7,21 @@ import pinterest from '../../images/icon-pinterest.svg'
 import instagram from '../../images/icon-instagram.svg'
 import Logo from './Logo'
 const Footer = () => {
+    const email = useRef(null)
+    const [validate,setValidate] = useState(true)
+    const validateEmail = () => 
+        setValidate(email.current.value.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/g) !== null)
+    
     const item = ['Home' ,'Pricing' ,'Products' ,'About Us' ,'Careers' ,'Community' ,'Privacy Policy']
     const networks = [facebook,youtube,twitter,pinterest,instagram]
     return (
         <ContainFooter>
-            <Form>
-                <input type="text" placeholder="Updates in your inbox..." />
-                <button type='button'>GO</button>
+            <Form validate={validate.toString()} >
+                <div>
+                    <input ref={email} type="text" placeholder="Updates in your inbox..." />
+                    {!validate && <p>Please insert a valid email</p>}
+                </div>
+                <button onClick={validateEmail} type='button'>GO</button>
             </Form>
             <Items>
                 <div>

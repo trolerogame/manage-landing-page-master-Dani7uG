@@ -28,6 +28,7 @@ export const Form = styled.form`
         font-size:16px;
         border:none;
         outline:none;
+        color:${props => props.validate === 'true' ? '#111' : '#e84118'};
     }
     input::placeholder{
         color:#999;
@@ -38,9 +39,15 @@ export const Form = styled.form`
         outline:none;
         background-color: hsl(12, 88%, 59%);
         border-radius:30px;
-        padding:15px 30px;
+        height: 50px;
+        width: 80px;
         font-weight: 700;
         color:#fff;
+        cursor:pointer;
+    }
+    p{
+       color:#e84118;
+       margin:1px 0;
     }
 `
 

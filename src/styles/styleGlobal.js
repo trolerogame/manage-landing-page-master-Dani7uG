@@ -3,6 +3,7 @@ import bg from '../../images/bg-tablet-pattern.svg'
 
 export const GlobalStyle = createGlobalStyle`
     body{
+        overflow-x: hidden;
         margin:0;
         padding:0;
         background:url(${bg}) no-repeat;

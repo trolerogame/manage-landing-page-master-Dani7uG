@@ -4,7 +4,16 @@ import { GetStarted } from '../styles/styleHeader'
 import { Illustration,ContainText,Manage,ContainManageText,ContainComments,ContainPoints,Point,Carousel,ContainIllustration } from '../styles/styleBody'
 import manage from '../Manage.json'
 import comment from '../Comment.json'
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 const Main = () => {
+    const items = comment.map((item,i) => 
+        <Carousel>
+            <img key={i} src={item.avatar} alt={`imagen`} />
+            <b>{item.author}</b>
+            <p>{item.comment}</p>
+        </Carousel>
+    );
     const [com,setCom] = useState(1)
     return (
         <main>
@@ -46,17 +55,8 @@ const Main = () => {
                 <ContainText center>
                     <h2>What they’ve said</h2>
                 </ContainText>
-                {comment.slice(com,com+1).map((item,i) => 
-                    <Carousel>
-                        <img key={i} src={item.avatar} alt={`imagen ${com+1}`} />
-                        <b>{item.author}</b>
-                        <p>{item.comment}</p>
-                    </Carousel>
-                )}
                 <ContainPoints>
-                    {comment.map((it,i) => 
-                        <Point key={i} focus={com == i} onClick={() => setCom(i)}></Point>  
-                    )}
+                    <AliceCarousel disableButtonsControls mouseTracking items={items} />
                 </ContainPoints>
                 <GetStarted responsive>Get Started</GetStarted>
             </ContainComments>
