@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import BgMovile from '../../images/bg-simplify-section-mobile.svg'
-import BgDesktop from '../../images/bg-simplify-section-desktop.svg'
+import BgMovile from '../../public/bg-simplify-section-mobile.svg'
+import BgDesktop from '../../public/bg-simplify-section-desktop.svg'
 
 
 export const ContainNotify = styled.div`
