@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import illustration from '../../images/illustration-intro.svg'
+import illustration from '../../public/illustration-intro.svg'
 import { GetStarted } from '../styles/styleHeader'
 import { Illustration,ContainText,Manage,ContainManageText,ContainComments,ContainPoints,Point,Carousel,ContainIllustration } from '../styles/styleBody'
 import manage from '../Manage.json'
