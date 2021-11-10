@@ -302,15 +302,7 @@ import{W as u,s as a,R as e,r as d,A as g,a as h}from"./vendor.fe96c187.js";cons
             display:none;
         }
     }
-`;a.div`
-
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-`;a.div`
-
-`;const F=a.div`
+`,F=a.div`
     position: relative;
     display:flex;
     flex-direction: column;
