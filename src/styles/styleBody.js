@@ -137,18 +137,6 @@ export const ContainComments = styled.div`
     }
 `
 
-export const ContainPoints = styled.div`
-
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-`
-
-export const Point = styled.div`
-
-`
-
 export const Carousel = styled.div`
     position: relative;
     display:flex;

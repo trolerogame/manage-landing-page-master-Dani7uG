@@ -1,7 +1,7 @@
 import React from 'react'
 import illustration from '../../public/illustration-intro.svg'
 import { GetStarted } from '../styles/styleHeader'
-import { Illustration,ContainText,Manage,ContainManageText,ContainComments,ContainPoints,Point,Carousel,ContainIllustration } from '../styles/styleBody'
+import { Illustration,ContainText,Manage,ContainManageText,ContainComments,Carousel,ContainIllustration } from '../styles/styleBody'
 import manage from '../Manage.json'
 import comment from '../Comment.json'
 import AliceCarousel from 'react-alice-carousel';
