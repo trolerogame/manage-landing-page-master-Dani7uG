@@ -113,18 +113,9 @@ export const ContainComments = styled.div`
     flex-direction: column;
     align-items: center;
     margin:40px 10px;
-
-`
-
-export const ContainPoints = styled.div`
-    margin:100px 0;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
     .alice-carousel__dots-item{
         display:inline-block;
-        margin:0 2.5px;
+        margin:0px 2.5px 30px 2.5px;
         width: 10px;
         height: 10px;
         border-radius: 50%;
@@ -143,9 +134,15 @@ export const ContainPoints = styled.div`
         .alice-carousel__dots{
             display:none;
         }
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
     }
+`
+
+export const ContainPoints = styled.div`
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 `
 
 export const Point = styled.div`

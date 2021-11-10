@@ -14,7 +14,14 @@ const Main = () => {
             <p>{item.comment}</p>
         </Carousel>
     );
-    const [com,setCom] = useState(1)
+    const responseProperties = {
+        0: {
+            items: 1,
+        },
+        1024: {
+            items: 3
+        }
+    }
     return (
         <main>
             <ContainIllustration>
@@ -55,9 +62,12 @@ const Main = () => {
                 <ContainText center>
                     <h2>What they’ve said</h2>
                 </ContainText>
-                <ContainPoints>
-                    <AliceCarousel disableButtonsControls mouseTracking items={items} />
-                </ContainPoints>
+                <AliceCarousel 
+                    responsive={responseProperties} 
+                    disableButtonsControls 
+                    mouseTracking 
+                    items={items} 
+                />
                 <GetStarted responsive>Get Started</GetStarted>
             </ContainComments>
         </main>

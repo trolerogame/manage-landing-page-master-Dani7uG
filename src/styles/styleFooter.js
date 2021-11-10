@@ -9,17 +9,32 @@ export const ContainFooter = styled.footer`
     .copyright{
         color:#999;
     }
+    #hidden{
+        display:none;
+    }
     svg{
         margin:30px 0;
     }
     @media (min-width:768px){
         flex-direction: row-reverse;
+        justify-content:space-around;
+        .copyright{
+            display:none;
+        }
+        #hidden{
+            display:block;
+        }
     }
 `
 
 export const Form = styled.form`
     display: flex;
-    justify-content:center;
+    flex-direction:column;
+    justify-content:space-between;
+    
+    .form{
+        display:flex;
+    }
     input{
         border-radius: 30px;
         padding:15px 25px;
@@ -49,6 +64,9 @@ export const Form = styled.form`
        color:#e84118;
        margin:1px 0;
     }
+    @media (min-width:768px){
+        height:200px;
+    }
 `
 
 export const Items = styled.div`
@@ -65,6 +83,16 @@ export const Items = styled.div`
     }
     p:hover{
         color:hsl(12, 88%, 59%);
+    }
+`
+
+export const ContainLogoIcons = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    @media (min-width:768px){
+        height:200px;
     }
 `
 
