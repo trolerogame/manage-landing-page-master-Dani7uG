@@ -1,8 +1,8 @@
 import React from 'react'
-import Logo from '../../public/logo.svg'
-import Hamburger from '../../public/icon-hamburger.svg'
+import Logo from '/logo.svg'
+import Hamburger from '/icon-hamburger.svg'
 import { ContainHeader,CloseHamburger,ItemHeader,GetStarted } from '../styles/styleHeader'
-import Close from '../../public/icon-close.svg'
+import Close from '/icon-close.svg'
 const Header = ({close,setClose}) => {
     const item = ['Pricing','Product','About Us','Careers', 'Community']
     return (
