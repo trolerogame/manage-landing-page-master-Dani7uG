@@ -49,6 +49,7 @@ export const CloseHamburger = styled.button`
     border:none;
     outline:none;
     background:none;
+    cursor: pointer;
     img{
         width:22px;
         height: 20px;

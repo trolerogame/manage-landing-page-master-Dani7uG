@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components'
-import bg from '../../public/bg-tablet-pattern.svg'
+import bg from '/bg-tablet-pattern.svg'
 
 export const GlobalStyle = createGlobalStyle`
     body{

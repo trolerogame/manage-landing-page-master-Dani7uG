@@ -1,10 +1,10 @@
 import React,{useState,useRef} from 'react'
 import { ContainFooter,Form,ImgsIconsContain,Items,ContainLogoIcons } from '../styles/styleFooter'
-import facebook from '../../public/icon-facebook.svg'
-import youtube from '../../public/icon-youtube.svg'
-import twitter from '../../public/icon-twitter.svg'
-import pinterest from '../../public/icon-pinterest.svg'
-import instagram from '../../public/icon-instagram.svg'
+import facebook from '/icon-facebook.svg'
+import youtube from '/icon-youtube.svg'
+import twitter from '/icon-twitter.svg'
+import pinterest from '/icon-pinterest.svg'
+import instagram from '/icon-instagram.svg'
 import Logo from './Logo'
 const Footer = () => {
     const email = useRef(null)
