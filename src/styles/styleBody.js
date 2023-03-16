@@ -48,7 +48,6 @@ export const ContainText = styled.div`
         p{
             text-align: start;
         }
-        width: 550px;
     }
 `
 
@@ -109,35 +108,11 @@ export const Manage = styled.div`
 `
 
 export const ContainComments = styled.div`
-    display:flex;
-    flex-direction: column;
-    align-items: center;
     margin:40px 10px;
-    .alice-carousel__dots-item{
-        display:inline-block;
-        margin:0px 2.5px 30px 2.5px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border:1px solid hsl(12, 88%, 59%);
-        cursor:pointer;
-        transition: all .1s linear;
-        background: none;
-    }
-    .alice-carousel__dots-item.__active{
-        background: hsl(12, 88%, 59%);
-    }
-    .alice-carousel__dots-item:hover{
-        background: hsl(12, 88%, 59%);
-    }
-    @media (min-width:768px){
-        .alice-carousel__dots{
-            display:none;
-        }
-    }
 `
 
-export const Carousel = styled.div`
+
+export const SlideStyle = styled.div`
     position: relative;
     display:flex;
     flex-direction: column;

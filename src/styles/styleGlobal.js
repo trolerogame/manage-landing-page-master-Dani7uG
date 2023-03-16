@@ -2,6 +2,9 @@ import {createGlobalStyle} from 'styled-components'
 import bg from '/bg-tablet-pattern.svg'
 
 export const GlobalStyle = createGlobalStyle`
+    :root{
+        --swiper-pagination-color:hsl(12,88%,59%);
+    }
     body{
         overflow-x: hidden;
         margin:0;

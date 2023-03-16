@@ -1,27 +1,15 @@
 import React from 'react'
 import illustration from '/illustration-intro.svg'
 import { GetStarted } from '../styles/styleHeader'
-import { Illustration,ContainText,Manage,ContainManageText,ContainComments,Carousel,ContainIllustration } from '../styles/styleBody'
+import { Illustration,ContainText,Manage,ContainManageText,ContainComments,ContainIllustration, SlideStyle } from '../styles/styleBody'
 import manage from '../Manage.json'
 import comment from '../Comment.json'
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper';
+import 'swiper/css';
+import 'swiper/css';
+import 'swiper/css/pagination';
 const Main = () => {
-    const items = comment.map((item,i) => 
-        <Carousel>
-            <img key={i} src={item.avatar} alt={`imagen`} />
-            <b>{item.author}</b>
-            <p>{item.comment}</p>
-        </Carousel>
-    );
-    const responseProperties = {
-        0: {
-            items: 1,
-        },
-        1024: {
-            items: 3
-        }
-    }
     return (
         <main>
             <ContainIllustration>
@@ -62,13 +50,38 @@ const Main = () => {
                 <ContainText center>
                     <h2>What they’ve said</h2>
                 </ContainText>
-                <AliceCarousel 
-                    responsive={responseProperties} 
-                    disableButtonsControls 
-                    mouseTracking 
-                    items={items} 
-                />
-                <GetStarted responsive>Get Started</GetStarted>
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, A11y, EffectCube]}
+                    spaceBetween={50}
+                    breakpoints={{
+                        0:{
+                            slidesPerView:1
+                        },
+                        650:{
+                            slidesPerView:2
+                        },
+                        1024:{
+                            slidesPerView:3
+                        }
+                    }}
+                    navigation
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+                >
+                    {comment.map((item,i) => 
+                        <SwiperSlide>
+                            <SlideStyle>
+                                <img key={i} src={item.avatar} alt={`imagen`} />
+                                <b>{item.author}</b>
+                                <p>{item.comment}</p>
+                            </SlideStyle>
+                        </SwiperSlide>
+                    )}
+                </Swiper>
+                <ContainText center>
+                    <GetStarted responsive>Get Started</GetStarted>
+                </ContainText>
+                
             </ContainComments>
         </main>
     )
